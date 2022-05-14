@@ -1,0 +1,60 @@
+#preloader {
+    overflow: hidden;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+    color: #fff;
+    text-align: center;
+    padding-top: 3.5rem;
+}
+
+@font-face {
+    font-family: Biko;
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+}
+
+.intro {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+.intro video {
+    width: 100%;
+}
+
+svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*  needed for FF, Safari, Edge */
+    height: 100%;
+}
+
+svg text {
+    font-family: Biko, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+svg rect {
+    fill: white;
+}
+
+svg>rect {
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+
+@media screen and (max-width:644px) {
+    #preloader {
+        padding-top: 10rem;
+    }
+}
